@@ -20,7 +20,7 @@ run:
     cmd: [/cmd.rb]
     image: { ref: 'ruby:2.6.3-alpine' }
     files:
-      /json_erb_render.rb:
+      /cmd.rb:
       /data: $(data)
       /template: $(template)
       /result: $(result)
