@@ -1,0 +1,26 @@
+description: renders an [eRuby](https://en.wikipedia.org/wiki/ERuby) template
+name: github.com/opspec-pkgs/eruby.render
+opspec: 0.1.6
+inputs:
+  data:
+    object:
+      description: data used to hydrate the template; made available as instance variables (via @key)
+      default: { name: Elon}
+  template:
+    file:
+      description: eruby template to render
+      default: example.erb
+outputs:
+  result:
+    string:
+      description: result of rendering the template
+version: 1.0.0
+run:
+  container:
+    cmd: [/cmd.rb]
+    image: { ref: 'ruby:2.6.3-alpine' }
+    files:
+      /json_erb_render.rb:
+      /data: $(data)
+      /template: $(template)
+      /result: $(result)
