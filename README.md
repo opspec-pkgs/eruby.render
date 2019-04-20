@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/eruby.render.svg?branch=master)](https://travis-ci.org/opspec-pkgs/eruby.render)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 renders an [eRuby](https://en.wikipedia.org/wiki/ERuby) template
